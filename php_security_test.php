@@ -11,12 +11,13 @@
     
     <?php
 		if($_GET){
-			//$username = escape_data($_GET['username']);
-			//$password = escape_data($_GET['password']);
 			
-			$username = $_GET['username'];
-			$password = $_GET['password'];
-			echo $username;
+			// Sanatize input ...
+			$username = escape_data($_GET['username']);
+			$password = escape_data($_GET['password']);
+			
+			//$username = $_GET['username'];
+			//$password = $_GET['password'];
 			
 			if(!empty($username) && !empty($password)){
 				$password = _getSaltedHash($password);
@@ -33,7 +34,7 @@
 		echo '
 		<form action="php_security_test.php" method="get">
 			<label>User Name</label>
-			
+			<input type="text" name="username" max="20"/>
 			<label>Password</label>
 			<input type="password" name="password"/><br>
 			<input type="submit" value="Submit"/>
