@@ -11,7 +11,6 @@
     
     <?php
 		if($_GET){
-			
 			// Sanatize input ...
 			$username = escape_data($_GET['username']);
 			$password = escape_data($_GET['password']);
