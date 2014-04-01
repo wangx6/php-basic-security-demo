@@ -1,4 +1,16 @@
-<?php include_once('../sys/core/init.inc.php'); ?>
+<?php 
+	/* Download the sys folder and place it one
+	*  level above your root directory
+	*  
+	*  the system folder contains init file, configuration file,
+	*  and class file for database connection.
+	*  
+	*  Created by Ying Han Wang
+	*
+	*  NOTE: The is only suitable for entry level web security research
+	*/
+	include_once('../sys/core/init.inc.php'); 
+?>
 <!DOCTYPE html>
 <html>
     <head>
